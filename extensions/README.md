@@ -10,7 +10,7 @@ This repository hosts community-contributed extensions for AiderDesk. Extensions
 
 ## Installation
 
-### Using the CLI (Recommended)
+### Using the CLI
 
 The easiest way to install extensions from this repository is using the AiderDesk CLI with GitHub URLs:
 
@@ -22,7 +22,7 @@ npx @aiderdesk/extensions install https://github.com/klocus/awesome-aider-desk/t
 npx @aiderdesk/extensions install https://github.com/klocus/awesome-aider-desk/tree/main/extensions/path-instructions
 ```
 
-### Adding to AiderDesk Settings (Best for frequent use)
+### Adding to AiderDesk Settings
 
 To make extensions from this repository available in the AiderDesk UI, add it as a custom extension catalog:
 
