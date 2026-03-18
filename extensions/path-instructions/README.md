@@ -19,8 +19,6 @@ The extension automatically injects context-specific coding standards into the A
 
 ## Installation
 
-**From this repository** (recommended)
-
 **Global** (available in all projects)
 
 ```bash
