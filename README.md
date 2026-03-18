@@ -46,7 +46,7 @@ For reference, see the official extensions maintained by the AiderDesk team:
 
 ## 🏢 About AiderDesk
 
-AiderDesk is developed and maintained by [Hotovo](https://www.hotovo.com). It's a powerful AI coding assistant that helps developers write better code, faster.
+AiderDesk is developed and maintained mainly by [Vladimir Hrusovsky](https://github.com/wladimiiir). It's a powerful AI coding assistant that helps developers write better code, faster.
 
 ## 📝 License
 
