@@ -69,6 +69,7 @@ export default class TaskFlowExtension implements Extension {
     description:
       'Advanced task orchestration for AiderDesk. Adds dependency tracking, cross-task memory, and automated flow management.',
     author: 'Paweł Klockiewicz',
+    capabilities: ['tools', 'events']
   };
 
   async onLoad(context: ExtensionContext) {
