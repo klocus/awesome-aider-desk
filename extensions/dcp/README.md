@@ -15,8 +15,6 @@ An extension that automatically manages conversation context to reduce token usa
 
 ## Installation
 
-**From this repository** (recommended)
-
 **Global** (available in all projects)
 
 ```bash

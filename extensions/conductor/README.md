@@ -23,8 +23,6 @@ A multi-agent orchestration framework for AiderDesk. The **Conductor** agent pla
 
 ## Installation
 
-**From this repository** (recommended)
-
 **Global** (available in all projects)
 
 ```bash

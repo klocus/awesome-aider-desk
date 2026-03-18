@@ -19,8 +19,6 @@ The extension natively integrates with AiderDesk's task management system, so al
 
 ## Installation
 
-**From this repository** (recommended)
-
 **Global** (available in all projects)
 
 ```bash
