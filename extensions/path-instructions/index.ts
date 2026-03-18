@@ -26,14 +26,6 @@ import type {
   ToolCalledEvent
 } from '@aiderdesk/extensions';
 
-export const metadata = {
-  name: 'Path-Specific Instructions',
-  version: '1.0.0',
-  description: 'Injects *.instructions.md before the first write/edit of matching files',
-  author: 'Paweł Klockiewicz',
-  capabilities: ['events']
-};
-
 interface InstructionFile {
   applyTo: string[];
   content: string;
@@ -42,7 +34,15 @@ interface InstructionFile {
 
 const FILE_WRITE_TOOLS = new Set(['file_write', 'power---file_write', 'file_edit', 'power---file_edit']);
 
-class PathInstructionsExtension implements Extension {
+export default class PathInstructionsExtension implements Extension {
+  static metadata = {
+    name: 'Path-Specific Instructions',
+    version: '1.0.0',
+    description: 'Injects *.instructions.md before the first write/edit of matching files',
+    author: 'Paweł Klockiewicz',
+    capabilities: ['events']
+  };
+
   /** Tracks which instruction files have already been injected, keyed by task ID. */
   private readonly appliedPerTask = new Map<string, Set<string>>();
 
@@ -324,5 +324,3 @@ class PathInstructionsExtension implements Extension {
     return str.replace(/[.+^${}()|[\]\\]/g, '\\$&');
   }
 }
-
-export default PathInstructionsExtension;
