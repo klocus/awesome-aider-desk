@@ -1,0 +1,23 @@
+{
+  "enabled": true,
+  "manualMode": false,
+  "protectedTools": [],
+  "tools": {
+    "nudgeEnabled": true,
+    "nudgeFrequency": 10,
+    "distill": true,
+    "prune": true
+  },
+  "strategies": {
+    "deduplication": {
+      "enabled": true
+    },
+    "supersedeWrites": {
+      "enabled": true
+    },
+    "purgeErrors": {
+      "enabled": true,
+      "turns": 4
+    }
+  }
+}

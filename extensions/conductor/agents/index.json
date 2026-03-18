@@ -1,0 +1,144 @@
+{
+  "agents": [
+    {
+      "id": "conductor",
+      "name": "Conductor",
+      "instructionsFile": "conductor.md",
+      "overrides": {
+        "usePowerTools": false,
+        "useTaskTools": true,
+        "useExtensionTools": true,
+        "useSkillsTools": true,
+        "includeContextFiles": true,
+        "toolApprovals": {
+          "memory---store_memory": "always",
+          "memory---update_memory": "ask",
+          "memory---delete_memory": "ask"
+        }
+      },
+      "overridesByMode": {
+        "subagent": {
+          "useSubagents": true
+        },
+        "subtask": {
+          "useSubagents": false
+        }
+      },
+      "subagent": {
+        "enabled": false,
+        "contextMemory": "off",
+        "systemPrompt": "",
+        "invocationMode": "on-demand",
+        "color": "#8b5cf6",
+        "description": "Plans work, breaks down tasks, coordinates specialist agents"
+      }
+    },
+    {
+      "id": "investigator",
+      "name": "├── Investigator",
+      "instructionsFile": "investigator.md",
+      "overrides": {
+        "useSkillsTools": true
+      },
+      "subagent": {
+        "enabled": true,
+        "contextMemory": "last-message",
+        "systemPrompt": "Explores codebase, assesses feasibility, gathers context",
+        "invocationMode": "on-demand",
+        "color": "#06b6d4",
+        "description": "Explores codebase, assesses feasibility, gathers context"
+      }
+    },
+    {
+      "id": "implementor",
+      "name": "├── Implementor",
+      "instructionsFile": "implementor.md",
+      "overrides": {
+        "useExtensionTools": true,
+        "useSkillsTools": true,
+        "includeContextFiles": true
+      },
+      "subagent": {
+        "enabled": true,
+        "contextMemory": "last-message",
+        "systemPrompt": "Executes implementation tasks, writes code",
+        "invocationMode": "on-demand",
+        "color": "#10b981",
+        "description": "Executes implementation tasks, writes code"
+      }
+    },
+    {
+      "id": "verifier",
+      "name": "├── Verifier",
+      "instructionsFile": "verifier.md",
+      "subagent": {
+        "enabled": true,
+        "contextMemory": "last-message",
+        "systemPrompt": "Verifies implementations match specs, runs tests",
+        "invocationMode": "on-demand",
+        "color": "#f59e0b",
+        "description": "Verifies implementations match specs, runs tests"
+      }
+    },
+    {
+      "id": "critic",
+      "name": "├── Critic",
+      "instructionsFile": "critic.md",
+      "subagent": {
+        "enabled": true,
+        "contextMemory": "last-message",
+        "systemPrompt": "Reviews specs and plans for feasibility and completeness",
+        "invocationMode": "on-demand",
+        "color": "#a855f7",
+        "description": "Reviews specs and plans for feasibility and completeness"
+      }
+    },
+    {
+      "id": "debugger",
+      "name": "├── Debugger",
+      "instructionsFile": "debugger.md",
+      "overrides": {
+        "useSkillsTools": true
+      },
+      "subagent": {
+        "enabled": true,
+        "contextMemory": "last-message",
+        "systemPrompt": "Analyzes and fixes bugs with minimal, targeted changes",
+        "invocationMode": "on-demand",
+        "color": "#ef4444",
+        "description": "Analyzes and fixes bugs with minimal, targeted changes"
+      }
+    },
+    {
+      "id": "reviewer",
+      "name": "├── Reviewer",
+      "instructionsFile": "reviewer.md",
+      "subagent": {
+        "enabled": true,
+        "contextMemory": "last-message",
+        "systemPrompt": "Reviews code changes with severity ratings",
+        "invocationMode": "on-demand",
+        "color": "#f97316",
+        "description": "Reviews code changes with severity ratings"
+      }
+    },
+    {
+      "id": "simplifier",
+      "name": "└── Simplifier",
+      "instructionsFile": "simplifier.md",
+      "overrides": {
+        "useExtensionTools": true,
+        "useSkillsTools": true,
+        "includeContextFiles": true
+      },
+      "subagent": {
+        "enabled": true,
+        "contextMemory": "last-message",
+        "systemPrompt": "Simplifies code for clarity, consistency, and maintainability",
+        "invocationMode": "on-demand",
+        "color": "#ec4899",
+        "description": "Simplifies code for clarity, consistency, and maintainability"
+      }
+    }
+  ]
+}
